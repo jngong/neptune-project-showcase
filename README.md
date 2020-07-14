@@ -9,11 +9,14 @@ From April - July 2020, I worked as an Instructional Associate for General Assem
 ## Backend Planning
 
 ### Entity Relationship Diagram
+![Image of ERD](https://github.com/jngong/neptune-project-showcase/blob/master/planning/erd.png?raw=true)
 
 ### API Endpoints
 
 ## Frontend Planning
 
 ### Wireframes
+![Image of Wireframes](https://github.com/jngong/neptune-project-showcase/blob/master/planning/wireframes.png?raw=true)
 
 ### React Component Hierarchy
+![Image of Component Hierarchy](https://github.com/jngong/neptune-project-showcase/blob/master/planning/component-hierarchy.png?raw=true)
