@@ -4,12 +4,14 @@ As an Instructional Associate for General Assembly's Software Engineering Immers
 
 ## Technology Stack
 - Backend RESTful API built with Ruby on Rails and PostgreSQL
-- Frontend User Interface built with React.js 
+- Frontend User Interface built with React.js and Styled Components
+
+<hr>
 
 ## Backend Planning
 
 ### Entity Relationship Diagram
-![Image of ERD](https://github.com/jngong/neptune-project-showcase/blob/master/planning/erd.png?raw=true)
+![entity-relationship-diagram](https://user-images.githubusercontent.com/34215359/87471078-bef5fd00-c5eb-11ea-98c1-cc93b686f865.png)
 
 ### API Endpoints
 
@@ -19,10 +21,12 @@ As an Instructional Associate for General Assembly's Software Engineering Immers
 - Edit project: PUT `/api/projects/:unit_id/:project_id`
 - Delete project: DELETE `/api/projects/:unit_id/:project_id`
 
+<hr>
+
 ## Frontend Planning
 
 ### Wireframes
-![Image of Wireframes](https://github.com/jngong/neptune-project-showcase/blob/master/planning/wireframes.png?raw=true)
+![wireframes](https://user-images.githubusercontent.com/34215359/87471094-c5847480-c5eb-11ea-9383-8f67b3a955af.png)
 
 ### React Component Hierarchy
-![Image of Component Hierarchy](https://github.com/jngong/neptune-project-showcase/blob/master/planning/component-hierarchy.png?raw=true)
+![component-hierarchy](https://user-images.githubusercontent.com/34215359/87471101-c917fb80-c5eb-11ea-9679-6ec0ca624cb9.png)
