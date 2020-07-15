@@ -1,12 +1,17 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { Header } from "./components/Header";
+import { Nav } from "./components/Nav";
+import { Footer } from "./components/Footer";
 
-const App = () =>{
+const App = () => {
   return (
     <div className="App">
-      <h1>Neptunes'Software Engineering Projects</h1>
+      <Nav />
+      <Header />
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;
