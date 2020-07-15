@@ -5,3 +5,64 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Student.destroy_all
+Project.destroy_all
+
+# Students seed data
+
+students = [
+  ["Zain Sattar", "https://www.linkedin.com/in/zain-sattar-0368611b0/"],
+  ["Wannamaker Charles", "https://www.linkedin.com/in/wannamaker-charles-5718a41b0/"],
+  ["Kelly Bergin", "https://www.linkedin.com/in/kelly-b-b07b2980/"],
+  ["Bryce Langille", "https://www.linkedin.com/in/bryce-langille1995/"],
+  ["Charaf Boulafaa", "https://www.linkedin.com/in/charaf-boulafaa/"],
+  ["Jacky Yang", "https://www.linkedin.com/in/jackycyang/"],
+  ["Christian Matos", "https://www.linkedin.com/in/christianrmatos/"],
+  ["Colin Malcolm", "https://www.linkedin.com/in/colinpmalcolm/"],
+  ["Shean Johnson", "https://www.linkedin.com/in/sheanj/"],
+  ["Dan Dalgatov", "https://www.linkedin.com/in/dandalgatov/"],
+  ["Estevan Acevedo", "https://www.linkedin.com/in/estevan-acevedo/"],
+  ["Felicia Csolak", "https://www.linkedin.com/in/felicia-csolak/"],
+  ["Gerand McDowell", "https://www.linkedin.com/in/gerand-mcdowell-6102851b1/"],
+  ["Jack South", "https://www.linkedin.com/in/jack-south-69a7a8167/"],
+  ["Johnathan Umana", "https://www.linkedin.com/in/johnathan-umana-658b06170/"],
+  ["Joshua Rizek", "https://www.linkedin.com/in/joshua-rizek-1a6a28199/"],
+  ["Kate Fang", "https://www.linkedin.com/in/katefang33/"],
+  ["Nikita Savelev", "https://www.linkedin.com/in/nikita-savelev-129994140/"],
+  ["Olu Kareem", "https://www.linkedin.com/in/olu-kareem-a227591b0/"],
+  ["Peter Cho", "https://www.linkedin.com/in/pcho90/"],
+  ["Peter Skrzypczak", "https://www.linkedin.com/in/peter-skrzypczak/"],
+  ["Scott Pick", "https://www.linkedin.com/in/scott-pick-121a5519b/"],
+  ["Shayne Sebro", "https://www.linkedin.com/in/shaynesebro/"],
+  ["Zach Glassman", "https://www.linkedin.com/in/zacharyglassman/"]
+]
+
+students.each do |student| 
+  Student.create!(
+    full_name: student[0],
+    linkedin_url: student[1]
+  )
+end
+
+puts "#{Student.count} students created"
+
+# Projects seed data 
+
+@p1_zain = Project.create!(title: "Pokedex", project_url: "https://pages.git.generalassemb.ly/zainsattar18/Pokedex-Neptune-Navy/", github_url: "https://git.generalassemb.ly/zainsattar18/Pokedex-Neptune-Navy", img_url: "https://media.giphy.com/media/10LKovKon8DENq/giphy.gif", unit: 1)
+
+@p2_zain = Project.create!(title: "One World", project_url: "https://one-world-p2.netlify.app/", github_url: "https://github.com/zainsattar18/one-world", img_url: "https://cdn.pixabay.com/photo/2015/01/15/16/17/hands-600497_960_720.jpg", unit: 2)
+
+@p1_wannamaker = Project.create!(title: "NYC HHC Patient Satisfaction Insight", project_url: "https://pages.git.generalassemb.ly/Wannamaker/NYC-HHC-Patient-Satisfaction-Insight/", github_url: "https://git.generalassemb.ly/Wannamaker/NYC-HHC-Patient-Satisfaction-Insight", img_url: "https://cdn.pixabay.com/photo/2016/08/10/20/26/stethoscope-1584223_960_720.jpg", unit: 1)
+
+@p2_kelly = Project.create!(title: "Tarou", project_url: "https://tarou.netlify.app/", github_url: "https://github.com/kellymakesstuff/tarou-tarot-card-reader", img_url: "https://media.giphy.com/media/8lOsZwQ9wLnhu/giphy.gif", unit: 2)
+
+@zain = Student.find_by(full_name: "Zain Sattar")
+@wannamaker = Student.find_by(full_name: "Wannamaker Charles")
+@kelly = Student.find_by(full_name: "Kelly Bergin")
+@zain.projects<<@p1_zain
+@zain.projects<<@p2_zain
+@wannamaker.projects<<@p1_wannamaker
+@kelly.projects<<@p2_kelly
+
+puts "#{Project.count} projects created"

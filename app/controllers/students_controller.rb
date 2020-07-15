@@ -1,28 +1,26 @@
 class StudentsController < ApplicationController
-  before_action :set_student, only: [:show, :update, :destroy]
+  before_action :set_student, only: [:show, :update, :add_project]
 
   # GET /students
   def index
     @students = Student.all
 
-    render json: @students
+    render json: @students, include: :projects
   end
 
   # GET /students/1
   def show
-    render json: @student
+    render json: @student, include: :projects 
   end
 
-  # POST /students
-  def create
-    @student = Student.new(student_params)
+  # GET /students/1/projects/1
+  def add_project
+    @project = Project.find(params[:project_id])
+    @student.projects << @project 
 
-    if @student.save
-      render json: @student, status: :created
-    else
-      render json: @student.errors, status: :unprocessable_entity
-    end
+    render json: @student, include: :projects
   end
+
 
   # PATCH/PUT /students/1
   def update
@@ -33,10 +31,6 @@ class StudentsController < ApplicationController
     end
   end
 
-  # DELETE /students/1
-  def destroy
-    @student.destroy
-  end
 
   private
     # Use callbacks to share common setup or constraints between actions.

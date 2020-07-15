@@ -5,17 +5,19 @@ class ProjectsController < ApplicationController
   def index
     @projects = Project.all
 
-    render json: @projects
+    render json: @projects, include: :students
   end
 
   # GET /projects/1
   def show
-    render json: @project
+    render json: @project, include: :students
   end
 
   # POST /projects
   def create
     @project = Project.new(project_params)
+    @student = Student.find(params[:student_id])
+    @project.student = @student
 
     if @project.save
       render json: @project, status: :created
