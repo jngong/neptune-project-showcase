@@ -49,20 +49,27 @@ puts "#{Student.count} students created"
 
 # Projects seed data 
 
-@p1_zain = Project.create!(title: "Pokedex", project_url: "https://pages.git.generalassemb.ly/zainsattar18/Pokedex-Neptune-Navy/", github_url: "https://git.generalassemb.ly/zainsattar18/Pokedex-Neptune-Navy", img_url: "https://media.giphy.com/media/10LKovKon8DENq/giphy.gif", unit: 1)
+chefs_choice = Project.create!(title: "Chef's Choice", project_url: "http://chefs-choice.surge.sh/", github_url: "https://github.com/snsebro/chefs-choice", img_url: "tbd", unit: 3)
 
-@p2_zain = Project.create!(title: "One World", project_url: "https://one-world-p2.netlify.app/", github_url: "https://github.com/zainsattar18/one-world", img_url: "https://cdn.pixabay.com/photo/2015/01/15/16/17/hands-600497_960_720.jpg", unit: 2)
+good_cuisine = Project.create!(title: "Good Cuisine", project_url: "http://slow-potato.surge.sh/", github_url: "https://github.com/kcip/good-cuisine", img_url: "tbd", unit: 3)
 
-@p1_wannamaker = Project.create!(title: "NYC HHC Patient Satisfaction Insight", project_url: "https://pages.git.generalassemb.ly/Wannamaker/NYC-HHC-Patient-Satisfaction-Insight/", github_url: "https://git.generalassemb.ly/Wannamaker/NYC-HHC-Patient-Satisfaction-Insight", img_url: "https://cdn.pixabay.com/photo/2016/08/10/20/26/stethoscope-1584223_960_720.jpg", unit: 1)
+spork = Project.create!(title: "Spork", project_url: "http://spork-app.surge.sh/", github_url: "https://github.com/kellymakesstuff/spork", img_url: "tbd", unit: 3)
 
-@p2_kelly = Project.create!(title: "Tarou", project_url: "https://tarou.netlify.app/", github_url: "https://github.com/kellymakesstuff/tarou-tarot-card-reader", img_url: "https://media.giphy.com/media/8lOsZwQ9wLnhu/giphy.gif", unit: 2)
+recipe_box = Project.create!(title: "Recipe Box", project_url: "http://foodiesandgoodiesrecipebox.surge.sh/", github_url: "https://github.com/malcolmc10/P3-recipebox", img_url: "tbd", unit: 3)
 
-@zain = Student.find_by(full_name: "Zain Sattar")
-@wannamaker = Student.find_by(full_name: "Wannamaker Charles")
-@kelly = Student.find_by(full_name: "Kelly Bergin")
-@zain.projects<<@p1_zain
-@zain.projects<<@p2_zain
-@wannamaker.projects<<@p1_wannamaker
-@kelly.projects<<@p2_kelly
+yummy_dish = Project.create!(title: "Yummy Dish", project_url: "http://tan-wrench.surge.sh/", github_url: "https://github.com/pcho90/yummy-dish", img_url: "tbd", unit: 3)
+
+p1_zain = Project.create!(title: "Pokedex", project_url: "https://pages.git.generalassemb.ly/zainsattar18/Pokedex-Neptune-Navy/", github_url: "https://git.generalassemb.ly/zainsattar18/Pokedex-Neptune-Navy", img_url: "https://media.giphy.com/media/10LKovKon8DENq/giphy.gif", unit: 1)
+
+p2_zain = Project.create!(title: "One World", project_url: "https://one-world-p2.netlify.app/", github_url: "https://github.com/zainsattar18/one-world", img_url: "https://cdn.pixabay.com/photo/2015/01/15/16/17/hands-600497_960_720.jpg", unit: 2)
+
+p1_wannamaker = Project.create!(title: "NYC HHC Patient Satisfaction Insight", project_url: "https://pages.git.generalassemb.ly/Wannamaker/NYC-HHC-Patient-Satisfaction-Insight/", github_url: "https://git.generalassemb.ly/Wannamaker/NYC-HHC-Patient-Satisfaction-Insight", img_url: "https://cdn.pixabay.com/photo/2016/08/10/20/26/stethoscope-1584223_960_720.jpg", unit: 1)
+
+p2_kelly = Project.create!(title: "Tarou", project_url: "https://tarou.netlify.app/", github_url: "https://github.com/kellymakesstuff/tarou-tarot-card-reader", img_url: "https://media.giphy.com/media/8lOsZwQ9wLnhu/giphy.gif", unit: 2)
+
+Student.find_by(full_name: "Zain Sattar").projects.push(p1_zain, p2_zain)
+Student.find_by(full_name: "Wannamaker Charles").projects.push(p1_wannamaker)
+Student.find_by(full_name: "Kelly Bergin").projects.push(p2_kelly)
+
 
 puts "#{Project.count} projects created"
