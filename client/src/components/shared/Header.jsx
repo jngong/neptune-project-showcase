@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import background from "../assets/galaxy-background-pixabay.jpg"
+import background from "../../assets/galaxy-background-pixabay.jpg"
 
 const Hero = styled.header`
   background: url(${background}) no-repeat center center scroll;

@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/neptune-logo.png";
+import logo from "../../assets/neptune-logo.png";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
@@ -16,7 +16,7 @@ const Logo = styled.img`
   height: 50px;
 `;
 
-const NavLink = styled.a`
+const NavLink = styled.div`
   color: #fff;
   text-transform: uppercase;
   font-weight: bold;
