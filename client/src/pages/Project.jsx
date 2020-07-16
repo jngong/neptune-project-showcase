@@ -1,9 +1,9 @@
 import React from 'react'
 
-export const SidebarNav = () => {
+export const Project = () => {
   return (
     <div>
-      Sidebar Nav
+      Project
     </div>
   )
 }
