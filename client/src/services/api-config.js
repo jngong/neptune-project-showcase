@@ -4,7 +4,7 @@ let baseURL;
 
 const apiURLs = {
     production: 'https://sei-products-api.herokuapp.com/api',
-    development: 'http://localhost:3000/api'
+    development: 'http://localhost:3000'
 }
 
 if (window.location.hostname === 'localhost') {

@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { withTheme } from "styled-components";
+import styled from "styled-components";
 
 const StyledFooter = styled.footer`
   background-color: #000;
@@ -23,7 +23,7 @@ export const Footer = () => {
       <p>&copy; 2020 SEI Neptune Cohort | General Assembly NYC</p>
       <p>
         Website created by{" "}
-        <a href="https://www.linkedin.com/in/jngong" target="_blank">
+        <a href="https://www.linkedin.com/in/jngong" target="blank">
           Jennifer Gong
         </a>
         , Instructional Associate
