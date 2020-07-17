@@ -3,11 +3,11 @@ import styled from "styled-components";
 
 const Tile = styled.div`
   width: 30%;
-  min-width: 275px;
+  min-width: 300px;
   max-width: 350px;
   border: 1px solid black;
   border-radius: 5px;
-  margin: 2rem;
+  margin: 1.5rem;
   padding: 2rem 0;
   display: flex;
   flex-direction: column;

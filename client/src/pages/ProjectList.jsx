@@ -6,7 +6,7 @@ const ProjectsContainer = styled.div`
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  padding: 3rem 4rem;
+  padding: 3rem;
 `;
 
 export const ProjectList = (props) => {
@@ -18,20 +18,20 @@ export const ProjectList = (props) => {
 
   const filterProjects = (unit) => {
     let filtered = props.projects.filter((project) => project.unit === unit);
-    console.log(filtered);
     setFilteredProjects(filtered);
+  };
+
+  const mapProjects = (list) => {
+    return list.map((project) => (
+      <ProjectTile key={project.id} project={project} />
+    ));
   };
 
   return (
     <ProjectsContainer>
-      {props.unit === 0 ?
-        props.projects.map((project) => (
-          <ProjectTile key={project.id} project={project} />
-        )) : 
-        filteredProjects.map((project) => (
-          <ProjectTile key={project.id} project={project} />
-        ))
-        }
+      {props.unit === 0
+        ? mapProjects(props.projects)
+        : mapProjects(filteredProjects)}
     </ProjectsContainer>
   );
 };

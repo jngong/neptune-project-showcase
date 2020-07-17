@@ -7,6 +7,10 @@ const UnitNav = styled.div`
   justify-content: center;
   background-color: #eee;
   padding: 1rem 3rem;
+
+  @media (max-width: 600px) {
+    padding: 1rem;
+  }
 `;
 
 const UnitTab = styled.button`
@@ -19,13 +23,16 @@ const UnitTab = styled.button`
   border-bottom: 2px solid #000;
   text-transform: uppercase;
   font-weight: bold;
+
+  @media (max-width: 600px) {
+    margin: 0 0.4rem;
+  }
 `;
 
 export const SubNav = (props) => {
-
   const handleClick = (unit) => {
-    props.setUnit(unit)
-  }
+    props.setUnit(unit);
+  };
 
   return (
     <UnitNav>
