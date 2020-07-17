@@ -14,7 +14,7 @@ const UnitNav = styled.div`
 `;
 
 const UnitTab = styled.button`
-  width: 100px;
+  width: 80px;
   padding: 0.5rem;
   margin: 0 2rem;
   border: none;
@@ -40,6 +40,7 @@ export const SubNav = (props) => {
       <UnitTab onClick={() => handleClick(2)}>Unit 2</UnitTab>
       <UnitTab onClick={() => handleClick(3)}>Unit 3</UnitTab>
       <UnitTab onClick={() => handleClick(4)}>Unit 4</UnitTab>
+      <UnitTab onClick={() => handleClick(0)}>All</UnitTab>
     </UnitNav>
   );
 };

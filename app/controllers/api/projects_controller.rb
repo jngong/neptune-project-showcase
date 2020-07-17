@@ -16,8 +16,8 @@ class Api::ProjectsController < ApplicationController
   # POST /projects
   def create
     @project = Project.new(project_params)
-    @student = Student.find(params[:student_id])
-    @project.student = @student
+    # @student = Student.find(params[:student_id])
+    # @project.student = @student
 
     if @project.save
       render json: @project, status: :created
@@ -48,6 +48,6 @@ class Api::ProjectsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def project_params
-      params.require(:project).permit(:title, :project_url, :img_url, :github_url, :unit)
+      params.require(:project).permit(:title, :project_url, :img_url, :github_url, :unit, :student_id)
     end
 end

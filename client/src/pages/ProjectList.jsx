@@ -7,6 +7,7 @@ const ProjectsContainer = styled.div`
   flex-flow: row wrap;
   justify-content: center;
   padding: 3rem;
+  min-height: 50vh;
 `;
 
 export const ProjectList = (props) => {
