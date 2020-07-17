@@ -13,13 +13,13 @@ export const ProjectList = (props) => {
   const [filteredProjects, setFilteredProjects] = useState([]);
 
   useEffect(() => {
-    filterProjects(props.unit);
+    filterProjects(3);
   }, [props.unit]);
 
   const filterProjects = (unit) => {
     let filtered = props.projects.filter(project => project.unit === unit);
-    setFilteredProjects(filtered);
     console.log(filtered);
+    setFilteredProjects(filtered);
   };
 
   return (
