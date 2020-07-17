@@ -34,7 +34,7 @@ export const Main = () => {
           <EditProject />
         </Route>
         <Route path="/create-project">
-          <CreateProject />
+          <CreateProject getProjects={getData} />
         </Route>
       </Switch>
     </div>

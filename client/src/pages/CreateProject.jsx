@@ -18,7 +18,7 @@ const reducer = (state, { field, value }) => {
   return { ...state, [field]: value };
 };
 
-export const CreateProject = () => {
+export const CreateProject = (props) => {
   const [students, setStudents] = useState([]);
   const [newProject, setNewProject] = useState([]);
 
@@ -44,6 +44,10 @@ export const CreateProject = () => {
     );
     setNewProject(response);
   };
+
+  useEffect(() => {
+    props.getProjects();
+  }, [newProject]);
 
   return (
     <div>
