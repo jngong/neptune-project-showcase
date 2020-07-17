@@ -5,16 +5,32 @@ const Tile = styled.div`
   width: 30%;
   min-width: 275px;
   border: 1px solid black;
-  border-radius: 2px;
+  border-radius: 5px;
   margin: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
+  h1 {
+    margin-bottom: 0;
+  }
+
   img {
-    width: 100%;
+    width: 90%;
     object-fit: cover;
-    max-height: 200px;
+    height: 175px;
+    margin: 1rem auto;
+  }
+
+  .project-links {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+  }
+
+  .project-links a {
+    color: #000;
+    display: block;
   }
 `;
 
@@ -34,6 +50,14 @@ export const ProjectTile = (props) => {
           </a>
         ))}
       </h2>
+      <div className="project-links">
+        <a href={project_url} target="blank">
+          <i className="fas fa-external-link-alt"></i> View Site
+        </a>
+        <a href={github_url} target="blank">
+          <i className="fab fa-github-square"></i> Explore Code
+        </a>
+      </div>
       <img src={img_url} />
     </Tile>
   );

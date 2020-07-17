@@ -6,10 +6,10 @@ const ProjectsContainer = styled.div`
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  padding: 3rem 4rem;
 `;
 
 export const ProjectList = (props) => {
-  
   const [filteredProjects, setFilteredProjects] = useState([]);
 
   useEffect(() => {
@@ -17,7 +17,7 @@ export const ProjectList = (props) => {
   }, [props.unit]);
 
   const filterProjects = (unit) => {
-    let filtered = props.projects.filter(project => project.unit === unit);
+    let filtered = props.projects.filter((project) => project.unit === unit);
     console.log(filtered);
     setFilteredProjects(filtered);
   };
