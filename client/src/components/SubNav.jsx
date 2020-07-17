@@ -21,13 +21,18 @@ const UnitTab = styled.button`
   font-weight: bold;
 `;
 
-export const SubNav = () => {
+export const SubNav = (props) => {
+
+  const handleClick = (unit) => {
+    props.setUnit(unit)
+  }
+
   return (
     <UnitNav>
-      <UnitTab>Unit 1</UnitTab>
-      <UnitTab>Unit 2</UnitTab>
-      <UnitTab>Unit 3</UnitTab>
-      <UnitTab>Unit 4</UnitTab>
+      <UnitTab onClick={() => handleClick(1)}>Unit 1</UnitTab>
+      <UnitTab onClick={() => handleClick(2)}>Unit 2</UnitTab>
+      <UnitTab onClick={() => handleClick(3)}>Unit 3</UnitTab>
+      <UnitTab onClick={() => handleClick(4)}>Unit 4</UnitTab>
     </UnitNav>
   );
 };

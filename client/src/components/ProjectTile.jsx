@@ -4,9 +4,11 @@ import styled from "styled-components";
 const Tile = styled.div`
   width: 30%;
   min-width: 275px;
+  max-width: 350px;
   border: 1px solid black;
   border-radius: 5px;
-  margin: 1rem;
+  margin: 2rem;
+  padding: 2rem 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -18,7 +20,7 @@ const Tile = styled.div`
   img {
     width: 90%;
     object-fit: cover;
-    height: 175px;
+    height: 200px;
     margin: 1rem auto;
   }
 

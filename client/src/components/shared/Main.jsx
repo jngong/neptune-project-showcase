@@ -9,7 +9,7 @@ import { getProjects } from "../../services/api-helper";
 
 export const Main = () => {
   const [projects, setProjects] = useState([]);
-  const [unit, setUnit] = useState(3);
+  const [unit, setUnit] = useState(0);
 
   useEffect(() => {
     getData();
@@ -24,7 +24,7 @@ export const Main = () => {
     <div>
       <Switch>
         <Route exact path="/">
-          <SubNav />
+          <SubNav setUnit={setUnit}/>
           <ProjectList projects={projects} unit={unit} />
         </Route>
         <Route path="/project/:id">

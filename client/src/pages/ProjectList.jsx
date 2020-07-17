@@ -13,7 +13,7 @@ export const ProjectList = (props) => {
   const [filteredProjects, setFilteredProjects] = useState([]);
 
   useEffect(() => {
-    filterProjects(3);
+    filterProjects(props.unit);
   }, [props.unit]);
 
   const filterProjects = (unit) => {
@@ -24,10 +24,14 @@ export const ProjectList = (props) => {
 
   return (
     <ProjectsContainer>
-      {props &&
+      {props.unit === 0 ?
         props.projects.map((project) => (
           <ProjectTile key={project.id} project={project} />
-        ))}
+        )) : 
+        filteredProjects.map((project) => (
+          <ProjectTile key={project.id} project={project} />
+        ))
+        }
     </ProjectsContainer>
   );
 };

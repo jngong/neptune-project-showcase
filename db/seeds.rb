@@ -49,15 +49,15 @@ puts "#{Student.count} students created"
 
 # Projects seed data 
 
-chefs_choice = Project.create!(title: "Chef's Choice", project_url: "http://chefs-choice.surge.sh/", github_url: "https://github.com/snsebro/chefs-choice", img_url: "tbd", unit: 3)
+chefs_choice = Project.create!(title: "Chef's Choice", project_url: "http://chefs-choice.surge.sh/", github_url: "https://github.com/snsebro/chefs-choice", img_url: "https://cdn.pixabay.com/photo/2015/10/26/07/21/soup-1006694_1280.jpg", unit: 3)
 
-good_cuisine = Project.create!(title: "Good Cuisine", project_url: "http://slow-potato.surge.sh/", github_url: "https://github.com/kcip/good-cuisine", img_url: "tbd", unit: 3)
+good_cuisine = Project.create!(title: "Good Cuisine", project_url: "http://slow-potato.surge.sh/", github_url: "https://github.com/kcip/good-cuisine", img_url: "https://cdn.pixabay.com/photo/2014/10/22/16/38/ingredients-498199_1280.jpg", unit: 3)
 
-spork = Project.create!(title: "Spork", project_url: "http://spork-app.surge.sh/", github_url: "https://github.com/kellymakesstuff/spork", img_url: "tbd", unit: 3)
+spork = Project.create!(title: "Spork", project_url: "http://spork-app.surge.sh/", github_url: "https://github.com/kellymakesstuff/spork", img_url: "https://cdn.pixabay.com/photo/2015/08/25/03/50/background-906135_1280.jpg", unit: 3)
 
-recipe_box = Project.create!(title: "Recipe Box", project_url: "http://foodiesandgoodiesrecipebox.surge.sh/", github_url: "https://github.com/malcolmc10/P3-recipebox", img_url: "tbd", unit: 3)
+recipe_box = Project.create!(title: "Recipe Box", project_url: "http://foodiesandgoodiesrecipebox.surge.sh/", github_url: "https://github.com/malcolmc10/P3-recipebox", img_url: "https://cdn.pixabay.com/photo/2017/03/17/10/29/breakfast-2151201_960_720.jpg", unit: 3)
 
-yummy_dish = Project.create!(title: "Yummy Dish", project_url: "http://tan-wrench.surge.sh/", github_url: "https://github.com/pcho90/yummy-dish", img_url: "tbd", unit: 3)
+yummy_dish = Project.create!(title: "Yummy Dish", project_url: "http://tan-wrench.surge.sh/", github_url: "https://github.com/pcho90/yummy-dish", img_url: "https://cdn.pixabay.com/photo/2016/08/01/17/28/table-1561597_960_720.jpg", unit: 3)
 
 p1_zain = Project.create!(title: "Pokedex", project_url: "https://pages.git.generalassemb.ly/zainsattar18/Pokedex-Neptune-Navy/", github_url: "https://git.generalassemb.ly/zainsattar18/Pokedex-Neptune-Navy", img_url: "https://media.giphy.com/media/10LKovKon8DENq/giphy.gif", unit: 1)
 
