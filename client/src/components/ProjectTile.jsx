@@ -58,7 +58,7 @@ export const ProjectTile = (props) => {
       <h2>{title}</h2>
       <div className="student-names">
         {students.map((student) => (
-          <div>
+          <div key={student.id}>
             {student.full_name}
             <a href={student.linkedin_url} target="blank" key={student.id}>
               <i className="fab fa-linkedin"></i>

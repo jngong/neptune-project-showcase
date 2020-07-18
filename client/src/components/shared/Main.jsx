@@ -27,13 +27,13 @@ export const Main = () => {
           <SubNav setUnit={setUnit} />
           <ProjectList projects={projects} unit={unit} />
         </Route>
-        <Route path="/projects/:id">
+        <Route exact path="/projects/:id">
           <Project projects={projects} />
         </Route>
-        <Route path="/projects/:id/edit">
+        <Route exact path="/projects/:id/edit">
           <EditProject />
         </Route>
-        <Route path="/create-project">
+        <Route exact path="/create-project">
           <CreateProject getProjects={getData} />
         </Route>
       </Switch>
