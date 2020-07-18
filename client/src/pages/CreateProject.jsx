@@ -1,4 +1,5 @@
 import React, { useReducer, useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import { getStudents, createProject } from "../services/api-helper";
 import { ProjectForm } from "../components/ProjectForm";
 
@@ -19,6 +20,7 @@ const reducer = (state, { field, value }) => {
 };
 
 export const CreateProject = (props) => {
+  const history = useHistory();
   const [students, setStudents] = useState([]);
   const [newProject, setNewProject] = useState([]);
 
@@ -43,6 +45,7 @@ export const CreateProject = (props) => {
       console.error
     );
     setNewProject(response);
+    history.push(`/projects/${response.id}`);
   };
 
   useEffect(() => {

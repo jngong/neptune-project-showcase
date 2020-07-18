@@ -24,13 +24,13 @@ export const Main = () => {
     <div>
       <Switch>
         <Route exact path="/">
-          <SubNav setUnit={setUnit}/>
+          <SubNav setUnit={setUnit} />
           <ProjectList projects={projects} unit={unit} />
         </Route>
-        <Route path="/project/:id">
-          <Project />
+        <Route path="/projects/:id">
+          <Project projects={projects} />
         </Route>
-        <Route path="/project/:id/edit">
+        <Route path="/projects/:id/edit">
           <EditProject />
         </Route>
         <Route path="/create-project">

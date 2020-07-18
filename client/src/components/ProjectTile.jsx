@@ -37,7 +37,7 @@ const Tile = styled.div`
 
   i {
     margin: 0 5px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 `;
 
@@ -50,13 +50,13 @@ export const ProjectTile = (props) => {
           {title}
         </a>
       </h2>
-      <h3>
+      <h4>
         {students.map((student) => (
-          <a href={student.linkedin_url} target="blank" key={student.id}>
-            By {student.full_name} <i className="fab fa-linkedin"></i>
-          </a>
+          <span><a href={student.linkedin_url} target="blank" key={student.id}>
+            {student.full_name} <i className="fab fa-linkedin"></i>
+          </a><br/></span>
         ))}
-      </h3>
+      </h4>
       <div className="project-links">
         <a href={project_url} target="blank">
           <i className="fas fa-external-link-alt"></i> View Site
