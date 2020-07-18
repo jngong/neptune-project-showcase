@@ -1,11 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+
 .App {
   text-align: center;
+  font-family: "Ubuntu", sans-serif;
 }
 
 * {
   box-sizing: border-box;
 }
 
-a {
+a,
+a:visited {
   text-decoration: none;
+  color: #407b87;
+}
+
+a:hover {
+  color: #00a8d1;
 }

@@ -10,9 +10,15 @@ const Hero = styled.header`
   align-items: center;
   flex-direction: column;
   text-align: center;
+  font-weight: 700;
   color: #fff;
-  height: 25vh;
+  height: 250px;
   padding: 1rem;
+
+  h1 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
 `;
 
 export const Header = () => {

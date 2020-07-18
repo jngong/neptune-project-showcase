@@ -35,11 +35,13 @@ const Tile = styled.div`
     display: flex;
     justify-content: space-around;
     margin-bottom: 2rem;
+    background-color: #e6f4f1;
+    padding: 0.8rem 0;
+    border-radius: 2px;
   }
 
   .project-links a,
   a:visited {
-    color: #000;
     display: block;
   }
 
@@ -53,16 +55,13 @@ export const ProjectTile = (props) => {
   const { title, github_url, img_url, project_url, students } = props.project;
   return (
     <Tile>
-      <h2>
-        <a href={project_url} target="blank">
-          {title}
-        </a>
-      </h2>
+      <h2>{title}</h2>
       <div className="student-names">
         {students.map((student) => (
           <div>
+            {student.full_name}
             <a href={student.linkedin_url} target="blank" key={student.id}>
-              {student.full_name} <i className="fab fa-linkedin"></i>
+              <i className="fab fa-linkedin"></i>
             </a>
           </div>
         ))}
@@ -75,7 +74,9 @@ export const ProjectTile = (props) => {
           <i className="fab fa-github-square"></i> Explore Code
         </a>
       </div>
-      <img src={img_url} />
+      <a href={project_url} target="blank">
+        <img src={img_url} alt={title} />
+      </a>
     </Tile>
   );
 };
