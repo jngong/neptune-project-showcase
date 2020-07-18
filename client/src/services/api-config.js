@@ -4,7 +4,7 @@ let baseURL;
 
 const apiURLs = {
   production: "https://neptune-sei-projects.herokuapp.com/api",
-  development: "https://neptune-sei-projects.herokuapp.com/api",
+  development: "http://localhost:3000/api",
 };
 
 if (window.location.hostname === "localhost") {
