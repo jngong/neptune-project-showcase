@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import background from "../../assets/galaxy-background-pixabay.jpg"
+import background from "../../assets/galaxy-background-pixabay.jpg";
 
 const Hero = styled.header`
   background: url(${background}) no-repeat center center scroll;
@@ -11,9 +11,9 @@ const Hero = styled.header`
   flex-direction: column;
   text-align: center;
   color: #fff;
-  height: 20vh;
+  height: 25vh;
   padding: 1rem;
-`
+`;
 
 export const Header = () => {
   return (

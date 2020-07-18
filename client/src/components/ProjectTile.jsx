@@ -7,7 +7,7 @@ const Tile = styled.div`
   max-width: 350px;
   border: 1px solid black;
   border-radius: 5px;
-  margin: 1.5rem;
+  margin: 1rem;
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
@@ -23,13 +23,21 @@ const Tile = styled.div`
     height: 200px;
   }
 
+  .student-names {
+    margin: 1rem 0;
+  }
+
+  .student-names > div {
+    margin: 0.3rem 0;
+  }
+
   .project-links {
     display: flex;
     justify-content: space-around;
     margin-bottom: 2rem;
   }
 
-  .project-links a, 
+  .project-links a,
   a:visited {
     color: #000;
     display: block;
@@ -37,7 +45,7 @@ const Tile = styled.div`
 
   i {
     margin: 0 5px;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
 `;
 
@@ -50,13 +58,15 @@ export const ProjectTile = (props) => {
           {title}
         </a>
       </h2>
-      <h4>
+      <div className="student-names">
         {students.map((student) => (
-          <span><a href={student.linkedin_url} target="blank" key={student.id}>
-            {student.full_name} <i className="fab fa-linkedin"></i>
-          </a><br/></span>
+          <div>
+            <a href={student.linkedin_url} target="blank" key={student.id}>
+              {student.full_name} <i className="fab fa-linkedin"></i>
+            </a>
+          </div>
         ))}
-      </h4>
+      </div>
       <div className="project-links">
         <a href={project_url} target="blank">
           <i className="fas fa-external-link-alt"></i> View Site

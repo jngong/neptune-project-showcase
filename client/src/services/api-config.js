@@ -3,8 +3,8 @@ import axios from "axios";
 let baseURL;
 
 const apiURLs = {
-  production: "https://sei-products-api.herokuapp.com/api",
-  development: "http://localhost:3000/api",
+  production: "https://neptune-sei-projects.herokuapp.com/api",
+  development: "https://neptune-sei-projects.herokuapp.com/api",
 };
 
 if (window.location.hostname === "localhost") {

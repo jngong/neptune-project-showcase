@@ -6,7 +6,7 @@ const ProjectsContainer = styled.div`
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  padding: 3rem;
+  padding: 1rem 3rem;
   min-height: 50vh;
 `;
 

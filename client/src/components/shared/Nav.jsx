@@ -9,11 +9,15 @@ const NavBar = styled.nav`
   align-items: center;
   padding: 0.5rem;
   background-color: #000;
+  position: sticky;
+  top: 0;
+  width: 100%;
 `;
 
 const Logo = styled.img`
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
+  margin-left: 1rem;
 `;
 
 const NavLink = styled.div`

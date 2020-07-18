@@ -1,20 +1,53 @@
 import React from "react";
 import styled from "styled-components";
 
+const Form = styled.form`
+  min-width: 300px;
+  max-width: 600px;
+  width: 50%;
+  background-color: #e6f4f1;
+  border-radius: 5px;
+  border: 1px solid #407b87;
+  margin: 0 auto;
+  padding: 1rem;
+`;
+
 const FormLabel = styled.label`
-  display: block;
-  margin: 1rem;
+  display: inline-block;
+  margin: 0.5rem 1rem;
 
   input,
   select {
     display: block;
     margin: 0.5rem auto;
+    padding: 0.5rem 1rem;
+    border: 0.5px solid #407b87;
+    min-width: 200px;
+  }
+`;
+
+const SubmitButton = styled.button`
+  display: block;
+  padding: 0.5rem 1rem;
+  background-color: #407b87;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  margin: 0.5rem auto;
+
+  &:hover {
+    transform: scale(1.05);
   }
 `;
 
 export const ProjectForm = (props) => {
   return (
-    <form onSubmit={props.handleSubmit}>
+    <Form onSubmit={props.handleSubmit}>
       <FormLabel>
         Student Name
         <select
@@ -90,7 +123,7 @@ export const ProjectForm = (props) => {
           <option value={4}>Unit 4</option>
         </select>
       </FormLabel>
-      <button type="submit">Submit Project</button>
-    </form>
+      <SubmitButton type="submit">Submit Project</SubmitButton>
+    </Form>
   );
 };
