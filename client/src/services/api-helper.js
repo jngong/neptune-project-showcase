@@ -33,7 +33,7 @@ export const updateProject = async (id, project) => {
 export const deleteProject = async (id) => {
   try {
     const response = await api.delete(`/projects/${id}`);
-    return response.data;
+    return response;
   } catch (error) {
     throw error;
   }

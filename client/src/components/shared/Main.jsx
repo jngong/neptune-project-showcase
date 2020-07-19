@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import { SubNav } from "../SubNav";
 import { ProjectList } from "../../pages/ProjectList";
 import { Project } from "../../pages/Project";
-import { EditProject } from "../../pages/EditProject";
+import EditProject from "../../pages/EditProject";
 import { CreateProject } from "../../pages/CreateProject";
 import { getProjects } from "../../services/api-helper";
 
@@ -28,7 +28,7 @@ export const Main = () => {
           <ProjectList projects={projects} unit={unit} />
         </Route>
         <Route exact path="/projects/:id">
-          <Project projects={projects} />
+          <Project projects={projects} getProjects={getData} />
         </Route>
         <Route exact path="/projects/:id/edit">
           <EditProject />

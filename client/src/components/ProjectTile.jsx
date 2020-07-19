@@ -12,6 +12,7 @@ const Tile = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-shadow: 8px 8px 10px #b0a8b9;
 
   h2 {
     margin: 0;

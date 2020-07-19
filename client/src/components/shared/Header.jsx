@@ -18,6 +18,7 @@ const Hero = styled.header`
   h1 {
     text-transform: uppercase;
     letter-spacing: 1px;
+    text-shadow: 1px 1px 4px #b0a8b9;
   }
 `;
 

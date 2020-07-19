@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useState } from "react";
+import { withRouter } from "react-router-dom";
+import { ProjectForm } from "../components/ProjectForm";
 
-export const EditProject = () => {
+const EditProject = (props) => {
+  const [project, setProject] = useState(props.location.state.project);
+
   return (
     <div>
-      Edit Project
+
     </div>
-  )
-}
+  );
+};
+
+export default withRouter(EditProject);
