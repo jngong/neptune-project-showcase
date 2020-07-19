@@ -1,14 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { ProjectTile } from "../components/ProjectTile";
-import styled from "styled-components";
-
-const ProjectsContainer = styled.div`
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  padding: 1rem 3rem;
-  min-height: 50vh;
-`;
+import {ProjectsContainer} from "../services/styles";
 
 export const ProjectList = (props) => {
   const [filteredProjects, setFilteredProjects] = useState([]);

@@ -5,19 +5,26 @@ import { ProjectList } from "../../pages/ProjectList";
 import { Project } from "../../pages/Project";
 import EditProject from "../../pages/EditProject";
 import { CreateProject } from "../../pages/CreateProject";
-import { getProjects } from "../../services/api-helper";
+import { getProjects, getStudents } from "../../services/api-helper";
 
 export const Main = () => {
   const [projects, setProjects] = useState([]);
+  const [students, setStudents] = useState([]);
   const [unit, setUnit] = useState(0);
 
   useEffect(() => {
     getData();
+    fetchStudents();
   }, []);
 
   const getData = async () => {
     const data = await getProjects();
     setProjects(data);
+  };
+
+  const fetchStudents = async () => {
+    const students = await getStudents();
+    setStudents(students);
   };
 
   return (
@@ -31,10 +38,10 @@ export const Main = () => {
           <Project projects={projects} getProjects={getData} />
         </Route>
         <Route exact path="/projects/:id/edit">
-          <EditProject />
+          <EditProject getProjects={getData} />
         </Route>
         <Route exact path="/create-project">
-          <CreateProject getProjects={getData} />
+          <CreateProject getProjects={getData} students={students} />
         </Route>
       </Switch>
     </div>

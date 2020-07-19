@@ -1,6 +1,6 @@
-import React, { useReducer, useState, useEffect } from "react";
+import React, { useReducer } from "react";
 import { useHistory } from "react-router-dom";
-import { getStudents, createProject } from "../services/api-helper";
+import { createProject } from "../services/api-helper";
 import { ProjectForm } from "../components/ProjectForm";
 
 const initialProject = {
@@ -21,18 +21,6 @@ const reducer = (state, { field, value }) => {
 
 export const CreateProject = (props) => {
   const history = useHistory();
-  const [students, setStudents] = useState([]);
-  const [newProject, setNewProject] = useState([]);
-
-  useEffect(() => {
-    fetchStudents();
-  }, []);
-
-  const fetchStudents = async () => {
-    const students = await getStudents();
-    setStudents(students);
-  };
-
   const [state, dispatch] = useReducer(reducer, initialProject);
 
   const handleChange = (e) => {
@@ -44,19 +32,15 @@ export const CreateProject = (props) => {
     let response = await createProject(state, state.student_id).catch(
       console.error
     );
-    setNewProject(response);
+    props.getProjects();
     history.push(`/projects/${response.id}`);
   };
-
-  useEffect(() => {
-    props.getProjects();
-  }, [newProject]);
 
   return (
     <div>
       <h1>Add A New Project</h1>
       <ProjectForm
-        students={students}
+        students={props.students}
         project={state}
         handleChange={handleChange}
         handleSubmit={handleSubmit}
