@@ -1,6 +1,7 @@
 # GA SEI Neptune Project Showcase
+[https://neptune-projects.netlify.app/](https://neptune-projects.netlify.app/)
 
-As an Instructional Associate for General Assembly's Software Engineering Immersive program, I'm helping a group of 24 fellows achieve their goal of becoming software engineers. Throughout the program, I and my fellow instructors guided students in the Neptune cohort through creating 4 projects each over the course of 3 months (April-July 2020). This site showcases these projects.
+As an Instructional Associate for General Assembly's Software Engineering Immersive program, I'm working with a group of 24 fellows to help them achieve their goal of becoming software engineers. Throughout the program, my fellow instructors and I guided students in the Neptune cohort through creating 4 projects each over the course of 3 months (April-July 2020). This site showcases these projects.
 
 ## Technology Stack
 - Backend RESTful API built with Ruby on Rails and PostgreSQL
